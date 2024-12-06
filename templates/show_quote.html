@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>Quote Entries</title>
+{% endblock %}
+
+{% block content %}
+<div class="page-title dark-background" style="background-image: url('{% static 'assets/img/AT-1.jpeg' %}');">
+  <div class="container position-relative">
+    <div class="container">
+      <div class="col-auto">
+        <div class="table-responsive">
+          <table class="table table-hover table-bordered">
+            <thead style="color: black;">
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Subject</th>
+              <th>Message</th>
+              <th>Date Created</th>
+              <th>Update</th>
+              <th>Delete</th>
+              <th>Pay</th>
+            </thead>
+            <tbody>
+              {% for quote in quotes %}
+              <tr>
+                <td>{{ quote.name }}</td>
+                <td>{{ quote.email }}</td>
+                <td>{{ quote.phone }}</td>
+                <td>{{ quote.subject }}</td>
+                <td>{{ quote.message }}</td>
+                <td>{{ quote.created_at|date:"M d, Y h:i A" }}</td>
+                <td>
+                  {% if user.is_superuser or quote.user == user %}
+                  <a href="{% url 'ConstructTech:update_quote' quote.id %}" class="btn btn-primary btn-sm">Update</a>
+                  {% endif %}
+                </td>
+                <td>
+                  {% if user.is_superuser or quote.user == user %}
+                  <form method="post" action="{% url 'ConstructTech:delete_quote' quote.id %}" style="display: inline;">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                  </form>
+                  {% endif %}
+                </td>
+                <td>
+                  {% if user.is_superuser or quote.user == user %}
+                  <a href="{% url 'ConstructTech:pay' %}" class="btn btn-success btn-sm">Pay</a>
+                  {% endif %}
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

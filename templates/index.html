@@ -1,0 +1,302 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}  home {% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <div class="info d-flex align-items-center">
+        <div class="container">
+          <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-6 text-center">
+              <h2>Welcome to ConstructTech</h2>
+              <p>Transforming the way construction works, ConstructTech is your trusted platform for seamless project management, reliable services, and innovative solutions. From booking consultations to purchasing materials, we empower you to achieve your construction goals with efficiency and ease. Let’s build the future, one project at a time.</p>
+              <!-- <a href="#get-started" class="btn-get-started">Get Started</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <div class="carousel-item">
+          <img src="{% static 'mediaimage1.png' %}" alt="">
+        </div>
+
+        <div class="carousel-item active">
+          <img src="{% static 'assets/img/hero-carousel/HC-2.jpg' %}" alt="">
+        </div>
+
+        <div class="carousel-item">
+          <img src="{% static 'assets/img/hero-carousel/HC-3.jpg' %}" alt="">
+        </div>
+
+        <div class="carousel-item">
+          <img src="{% static 'assets/img/hero-carousel/HC-4.jpg' %}" alt="">
+        </div>
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+
+
+    <!-- Get Started Section -->
+    <section id="get-started" class="get-started section">
+
+      <div class="container">
+
+        <div class="row justify-content-between gy-4">
+
+          <div class="col-lg-12 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100" style="text-align: center;">
+            <div class="content">
+              <h3>Building Dreams, One Project at a Time.</h3>
+              <p>We bring your construction ideas to life with precision and expertise. At ConstructTech, we focus on delivering top-quality services, reliable solutions, and sustainable results tailored to your needs. Let us help you turn your vision into reality.</p>
+
+              <p>Our team is committed to excellence in every project. Whether it's innovative designs or efficient execution, ConstructTech ensures exceptional quality and customer satisfaction at every step of the journey.</p>
+
+            </div>
+          </div>
+
+
+        
+        </div>
+
+      </div>
+
+    </section><!-- /Get Started Section -->
+
+    <!-- Constructions Section -->
+    <section id="constructions" class="constructions section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Constructions</h2>
+        <p>Innovative solutions for modern construction, enhancing efficiency and sustainability.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg"><img src="{% static 'assets/img/BT-1.png' %}" alt=""></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Empowering Construction with Cutting-Edge Technology</h4>
+                    <p>Delivering innovative construction technology solutions to streamline processes, enhance productivity, and ensure project success. Trust us to build a smarter tomorrow, today.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg"><img src="{% static 'assets/img/BT2.png' %}" alt=""></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Revolutionizing Construction with Smart Solutions</h4>
+                    <p>We specialize in delivering advanced construction technologies that drive efficiency, ensure quality, and redefine industry standards. Building a future where innovation meets excellence.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg"><img src="{% static 'assets/img/BT3.png' %}" alt=""></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Innovative Solutions for Complex Construction Challenges</h4>
+                    <p>At ConstructTech, we transform construction projects with cutting-edge technology, simplifying workflows, reducing costs, and ensuring precision at every stage. Your vision, our expertise.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg"><img src="{% static 'assets/img/BT4.png' %}" alt=""></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Transforming Construction with Innovation and Expertise</h4>
+                    <p>We bring cutting-edge technology and expert solutions to revolutionize construction processes, ensuring precision, reliability, and unmatched quality in every project.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Constructions Section -->
+
+
+  </section><!-- /Projects Section -->
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Testimonials</h2>
+      <p>Discover how our innovative construction technology solutions have helped clients streamline their projects, increase efficiency, and achieve outstanding results.</p>
+    </div><!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="swiper init-swiper">
+        <script type="application/json" class="swiper-config">
+          {
+            "loop": true,
+            "speed": 600,
+            "autoplay": {
+              "delay": 5000
+            },
+            "slidesPerView": "auto",
+            "pagination": {
+              "el": ".swiper-pagination",
+              "type": "bullets",
+              "clickable": true
+            },
+            "breakpoints": {
+              "320": {
+                "slidesPerView": 1,
+                "spaceBetween": 40
+              },
+              "1200": {
+                "slidesPerView": 2,
+                "spaceBetween": 20
+              }
+            }
+          }
+        </script>
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-wrap">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Isaack Lenaola</h3>
+                <h4>Ceo &amp; Founder</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>"ConstructTech's cutting-edge solutions have revolutionized the way we approach construction projects. Their innovative technology, combined with a commitment to excellence, significantly enhanced our efficiency and project outcomes."</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-wrap">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sarah Williams</h3>
+                <h4>Lead Designer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>"ConstructTech's innovative solutions allowed us to seamlessly integrate cutting-edge technology into our design process, optimizing both time and quality. Their attention to detail and commitment to excellence have been invaluable to our success."</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-wrap">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Edwin Mutai</h3>
+                <h4>Store Owner</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>"ConstructTech's innovative solutions have transformed the way I manage my business operations. Their seamless integration of technology streamlined my processes, reduced costs, and helped increase overall efficiency. A game changer for any business!"</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-wrap">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Vallary Chebet</h3>
+                <h4>Freelancer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>"ConstructTech's advanced tools and seamless integration helped me enhance my freelance projects. Their technology has made it easier to collaborate, optimize workflows, and deliver outstanding results to my clients. A must-have for anyone in the industry!"</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-wrap">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Kiara</h3>
+                <h4>Entrepreneur</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>"ConstructTech's innovative solutions have been invaluable in driving my entrepreneurial ventures. Their tools helped streamline my business operations, improve efficiency, and accelerate growth. A true partner in achieving success!"</span>
+  <i class="bi bi-quote quote-icon-right"></i>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+
+  </section><!-- /Testimonials Section -->
+
+
+{% endblock %}

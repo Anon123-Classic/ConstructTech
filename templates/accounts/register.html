@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}  Register {% endblock %}
+
+{% block content %}
+
+{% if messages  %} 
+<ul>
+  {% for message in messages%}
+  <li style="color: {% if message.tags == 'error'%}red{% else %} green{% endif %};">
+    {{ message }}
+  </li>
+  {% endfor %}
+</ul>
+
+{% endif%}
+
+
+
+<!------ Include the above in your HEAD tag ---------->
+
+
+
+
+<div class="container">
+
+<hr>
+
+
+
+
+
+<div class="card bg-light" style="background-image: url('{% static 'assets/img/AT-1.jpeg' %}');">
+<article class="card-body mx-auto" style="max-width: 400px;">
+	<h4 class="card-title mt-3 text-center">Create Account</h4>
+	<p class="text-center">Get started with your free account</p>
+	
+	<p class="divider-text">
+        
+    </p>
+	<form method="post">
+        {% csrf_token %}
+	<div class="form-group input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+		 </div>
+        <input name="username" class="form-control" placeholder="Username" type="text">
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="email" class="form-control" placeholder="Email address " type="email">
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+		</div>
+		<select class="custom-select" style="max-width: 120px;">
+		    <option selected="">+254</option>
+		    <option value="1">+256</option>
+		    <option value="2">+255</option>
+		    <!-- <option value="3">+701</option> -->
+		</select>
+    	<input name="phone" class="form-control" placeholder="Phone number" type="text">
+    </div> <!-- form-group// -->
+ <!-- form-group end.// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		</div>
+        <input name="password" class="form-control" placeholder="Create password" type="password">
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		</div>
+        <input name="confirm_password" class="form-control" placeholder="Confirm password" type="password">
+    </div> <!-- form-group// -->                                      
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block" style="background-color: #feb900;" > Create Account  </button>
+    </div> <!-- form-group// -->      
+    <p class="text-center">Have an account? <a href="">Log In</a> </p>                                                                 
+</form>
+</article>
+</div> <!-- card.// -->
+
+</div> 
+<!--container end.//-->
+{% endblock %}

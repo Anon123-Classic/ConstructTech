@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static%}
+
+{% block title%} login {% endblock%}
+
+{% block content %}
+<div class="page-title dark-background" style="background-image: url('{% static 'assets/img/AT-1.jpeg' %}');">
+    <div class="container position-relative">
+{% if messages %}
+<ul>
+  {% for message in messages %} 
+  <li style="color: {% if message.tags == 'error' %}red{% else %}green{% endif %};">
+    {{ message }}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+<body>
+   
+        <article class="card-body mx-auto" style="max-width: 400px;">
+            <h4 class="card-title mt-3 text-center text-white">Login</h4>
+            <p class="text-center text-white">Sign in to your account</p>
+    
+            <p class="divider-text"></p>
+    
+            <form method="post">
+                {% csrf_token %}
+                
+                <!-- Username Input Group -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                    </div>
+                    <input name="username" class="form-control" placeholder="Username" type="text" required>
+                </div>
+    
+                <!-- Password Input Group -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                    </div>
+                    <input name="password" class="form-control" placeholder="Password" type="password" required>
+                </div>
+    
+                <!-- Remember Me Checkbox -->
+                <div class="form-group">
+                    <label for="remember-me" class="text-info">
+                        <span style="color: #feb900;" >Remember me</span>
+                        <input id="remember-me" name="remember-me" type="checkbox">
+                    </label>
+                </div>
+    
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block" style="background-color: #feb900;">Login</button>
+                </div>
+    
+                <!-- Register Link -->
+                <p class="text-center text-white">Don't have an account? <a href="{% url 'accounts:register' %}">Register here</a></p>
+            </form>
+        </article>
+    </div>
+    
+</body>
+
+
+{% endblock%}

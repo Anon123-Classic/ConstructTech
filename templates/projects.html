@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}  projects {% endblock %}
+
+{% block content %}
+
+<body class="projects-page">
+
+
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" style="background-image: url('{% static 'assets/img/AT-1.jpeg' %}');">
+      <div class="container position-relative">
+
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+<!-- Projects Section -->
+<section id="projects" class="projects section">
+  <div class="container">
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+      <!-- Portfolio Filters -->
+      <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+        <li data-filter="*" class="filter-active">All</li>
+        <li data-filter=".filter-remodeling">Remodeling</li>
+        <li data-filter=".filter-construction">Construction</li>
+        <li data-filter=".filter-repairs">Repairs</li>
+        <li data-filter=".filter-design">Design</li>
+      </ul><!-- End Portfolio Filters -->
+
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+        <!-- Remodeling Project 1 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
+          <div class="portfolio-content h-100">
+            <img src="{% static 'assets/img/projects/PJ9.png' %}" class="img-fluid" alt="Modern Living Room Remodel">
+            <div class="portfolio-info">
+              <h4>Modern Living Room Remodel</h4>
+              <p>A complete transformation of a living room space, bringing in modern design elements and efficient use of space.</p>
+              <a href="{% static 'assets/img/projects/remodeling-9.jpg' %}" title="Modern Living Room Remodel" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- Construction Project 1 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-construction">
+          <div class="portfolio-content h-100">
+            <img src="{% static 'assets/img/projects/PJ3.png' %}" class="img-fluid" alt="New Office Building Construction">
+            <div class="portfolio-info">
+              <h4>New Office Building Construction</h4>
+              <p>We built a modern office building that maximizes natural light and optimizes office space for efficiency and comfort.</p>
+              <a href="{% static 'assets/img/projects/PJ3.png' %}" title="New Office Building Construction" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- Repairs Project 1 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-repairs">
+          <div class="portfolio-content h-100">
+            <img src="{% static 'assets/img/projects/PJ4.png' %}" class="img-fluid" alt="Home Kitchen Repair">
+            <div class="portfolio-info">
+              <h4>Home Kitchen Repair</h4>
+              <p>Repair and renovation of an outdated kitchen with modern appliances, enhanced lighting, and optimized layout.</p>
+              <a href="{% static 'assets/img/projects/PJ4.png' %}" title="Home Kitchen Repair" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- Design Project 1 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">
+          <div class="portfolio-content h-100">
+            <img src="{% static 'assets/img/projects/PJ6.png' %}" class="img-fluid" alt="Landscape Design for Residential Property">
+            <div class="portfolio-info">
+              <h4>Landscape Design for Residential Property</h4>
+              <p>Designed a beautiful garden and outdoor living space, enhancing the property's curb appeal with sustainable landscaping.</p>
+              <a href="{% static 'assets/img/projects/PJ6.png' %}" title="Landscape Design for Residential Property" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- Remodeling Project 2 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
+          <div class="portfolio-content h-100">
+            <img src="{% static 'assets/img/projects/PJ5.png' %}" class="img-fluid" alt="Contemporary Living Room Remodel">
+            <div class="portfolio-info">
+              <h4>Contemporary Living Room Remodel</h4>
+              <p>A stylish living room update with a focus on minimalism, clean lines, and a sophisticated color palette.</p>
+              <a href="{% static 'assets/img/projects/PJ5.png' %}" title="Contemporary Living Room Remodel" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- Construction Project 2 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-construction">
+          <div class="portfolio-content h-100">
+            <img src="{% static 'assets/img/projects/construction-2.jpg' %}" class="img-fluid" alt="Commercial Building Construction">
+            <div class="portfolio-info">
+              <h4>Commercial Building Construction</h4>
+              <p>We successfully completed the construction of a commercial building with efficient design, sustainability features, and energy-saving technology.</p>
+              <a href="{% static 'assets/img/projects/construction-2.jpg' %}" title="Commercial Building Construction" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- Repairs Project 2 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-repairs">
+          <div class="portfolio-content h-100">
+            <img src="{% static 'assets/img/projects/repairs-2.jpg' %}" class="img-fluid" alt="Office Renovation and Repairs">
+            <div class="portfolio-info">
+              <h4>Office Renovation and Repairs</h4>
+              <p>Renovated office spaces to create a more modern, efficient, and welcoming environment for employees and clients.</p>
+              <a href="{% static 'assets/img/projects/repairs-2.jpg' %}" title="Office Renovation and Repairs" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- Design Project 2 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">
+          <div class="portfolio-content h-100">
+            <img src="{% static 'assets/img/projects/PJ7.png' %}" class="img-fluid" alt="Urban Garden Design">
+            <div class="portfolio-info">
+              <h4>Urban Garden Design</h4>
+              <p>Transforming urban spaces into beautiful gardens that are both functional and eco-friendly, enhancing the city environment.</p>
+              <a href="{% static 'assets/img/projects/PJ7.png' %}" title="Urban Garden Design" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- Remodeling Project 3 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
+          <div class="portfolio-content h-100">
+            <img src="{% static 'assets/img/projects/remodeling-3.jpg' %}" class="img-fluid" alt="Cozy Home Bedroom Remodel">
+            <div class="portfolio-info">
+              <h4>Cozy Home Bedroom Remodel</h4>
+              <p>A cozy bedroom renovation to create a relaxing retreat with modern furniture, soft lighting, and natural materials.</p>
+              <a href="{% static 'assets/img/projects/remodeling-3.jpg' %}" title="Cozy Home Bedroom Remodel" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+      </div><!-- End Portfolio Items -->
+    </div>
+  </div>
+</section><!-- End Projects Section -->
+
+  </main>
+{% endblock %}

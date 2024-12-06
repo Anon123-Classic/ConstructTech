@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}  request-quote {% endblock %}
+
+
+{% block content %}
+<div class="page-title dark-background" style="background-image: url('{% static 'assets/img/AT-1.jpeg' %}');">
+    <div class="container position-relative">
+
+    </div>
+  </div><!-- End Page Title -->
+<section id="request-quote" class="quote section light-background">
+    <div class="container">
+        <div class="col-lg-12" data-aos="fade-up" data-aos-delay="300" style="width: 100%; padding: 0; margin: 0;">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d510691.8396994686!2d35.35204331799317!3d-0.25112469180761543!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182a575e241cfed9%3A0xd773e539b21bacf4!2sTengecha%20Rd%2C%20Kericho!5e0!3m2!1sen!2ske!4v1733211944674!5m2!1sen!2ske" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <br>
+        
+          <br>
+        <div>
+
+
+
+        <!-- Quote Form -->
+        <div class="quote-form" data-aos="fade-up" data-aos-delay="100">
+            <form method="post">
+                {% csrf_token %}
+                <div class="row gy-3">
+                    <div class="col-4">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="col-4">
+                        <label for="email">Your Email Address</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Your Email Address" required>
+                    </div>
+                    <div class="col-4">
+                        <label for="phone">Your Phone</label>
+                        <input type="text" id="phone" name="phone" class="form-control" placeholder="Your Phone" required>
+                    </div>
+                    <div class="col-4">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required>
+                    </div>
+                    <div class="col-4">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" class="form-control" rows="6" placeholder="How can we help you?" required></textarea>
+                    </div>
+                    <div class="col-4">
+                        <label>
+                            <input type="checkbox" name="agree" required> I agree that my data is collected and stored.
+                        </label>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-primary" style="background-color: #feb900;">Request a Quote</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+</section>
+
+
+{% endblock %}
